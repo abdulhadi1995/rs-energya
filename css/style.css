@@ -6,6 +6,7 @@
 
 :root {
     --color-primary: #21BEFC;
+    --color-primary-dark: #068fc5;
 }
 * {
     box-sizing: border-box;
@@ -68,6 +69,10 @@ ul,ol {
 .btn-danger {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
+}
+.btn-danger:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
 }
 .btn-outline-dark {
     border: 1px solid rgb(51,51,51);
@@ -249,19 +254,43 @@ header {
 
 /*--- Banner CSS Start ---*/
 .banner {
-    background: linear-gradient(rgba(29, 136, 229, 0.6), rgba(33, 190, 253, 0.6)), url("../images/banner.jpeg  ") center center no-repeat;
+    background: url("../images/banner.jpeg  ") center center no-repeat;
     background-size: cover;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 78px);
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding: 30px 0 70px 0;
+    position: relative;
+    z-index: 1;
+}
+.banner:after {
+    content: "";
+    background-image: linear-gradient(rgba(29, 136, 229, 0.77), rgba(33, 190, 253, 0.77));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .inner_banner {
     background-position: center center;
     background-repeat: no-repeat;
     height: 460px;
     background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.inner_banner:after {
+    content: "";
+    background-image: linear-gradient(rgba(29, 136, 229, 0.77), rgba(33, 190, 253, 0.77));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .banner_content {
     max-width: 860px;
@@ -477,7 +506,7 @@ header {
 
 /*--- Text Sec CSS Start ---*/
 .text_section {
-    background-image: linear-gradient(rgba(29, 136, 229, 0.6), rgba(33, 190, 253, 0.6)), url("../images/factory.jpeg");
+    background-image: linear-gradient(rgba(29, 136, 229, 0.77), rgba(33, 190, 253, 0.77)), url("../images/factory.jpeg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -620,6 +649,10 @@ header {
 }
 .form-control {
     height: 45px;
+}
+.form-control:focus {
+    box-shadow: none;
+    outline-color: var(--color-primary);
 }
 textarea.form-control {
     height: 170px;
@@ -768,6 +801,10 @@ textarea.form-control {
     text-transform: uppercase;
     margin:7px 10px;
     display: inline-block;
+}
+.ftr_links a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 .copyrights p {
     color: #fff;
