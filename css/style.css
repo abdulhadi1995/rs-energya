@@ -1,0 +1,909 @@
+
+@import "bootstrap.min.css";
+@import "font-awesome.min.css";
+@import "owl.carousel.min.css";
+@import "fonts.css";
+
+:root {
+    --color-primary: #21BEFC;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    color: #333333;
+    cursor: auto;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4;
+    position: relative;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s all ease;
+    color: var(--color-primary);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.text_hightlight {
+    color: var(--color-primary);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 3px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    box-sizing: border-box;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+.btn-lg {
+    padding: 10px 30px;
+    font-size: 18px;
+}
+.btn-danger {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.btn-outline-dark {
+    border: 1px solid rgb(51,51,51);
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+}
+section {
+    padding: 55px 0;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.h1, h1  {
+    font-size: 60px;
+    margin: 0;
+}
+.h2, h2 {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+}
+.h3, h3 {
+    font-size: 30px;
+    margin: 0;
+}
+.h4, h4 {
+    font-size: 24px;
+    margin: 0;
+}
+.h5, h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+.h6, h6 {
+    font-size: 168px;
+    margin: 0;
+}
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.section_title {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    text-align: center;
+}
+.section_title.text-left {
+    margin-left: 0;
+}
+.section_title h2 {
+    position: relative;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.section_title  h2 span {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.section_title.light h2 {
+    color: #fff;
+}
+.section_title h2:after  {
+    content: "";
+    width: 120px;
+    height: 1px;
+    background: #999999;    
+    display: block;
+    margin: 15px auto;
+}
+.section_title.text-left h2:after {
+    margin-left: 0;
+}
+.section_title p {
+    margin-bottom: 25px;
+}
+.testimonials_section .section_title h2,
+.testimonials_section .section_title p,
+.team_section .section_title h2,
+.team_section .section_title p {
+    color: #fff;
+}
+
+.no-gutters {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.no-gutters>.col, .no-gutters>[class*=col-] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/*--- global CSS end ---*/
+
+
+/*--- Header CSS Start ---*/
+header {
+    background-color: #333333;
+    padding: 15px 0;
+}
+.navbar-brand {
+    width: 185px;
+}
+.navbar-brand img {
+    width: 100%;
+}
+.navbar {
+    padding: 0;
+}
+.navbar-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+.navbar-expand-lg .navbar-nav li + li {
+    margin-left: 30px;
+}
+.navbar-expand-lg .navbar-nav .nav-link,
+.navbar-expand-lg .navbar-nav a  {
+    padding: 0 0 7px 0;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-expand-lg .navbar-nav a:hover {
+    border-bottom-color:var(--color-primary);
+}
+
+/* Menu btn CSS */
+.navbar-toggler {
+    color: #fff;
+    height: 34px;
+    line-height: 33px;
+    padding: 0 2.5rem 0 0.9375rem;
+    position: relative;
+    font-size: 16px;
+    border: none;
+}
+.tabs_btn {
+    width: 40px;
+    background:var(--color-primary);
+    height: 40px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.navbar-toggler span:after,
+.tabs_btn:after {
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    margin-top: -8px;
+    top: 50%;
+    right: 0.9375rem;
+    box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+    width: 16px;
+}
+.tabs_btn:after {
+    right: 12px;
+    top: 21px;
+}
+/*--- Header CSS End ---*/
+
+
+/*--- Banner CSS Start ---*/
+.banner {
+    background: linear-gradient(rgba(29, 136, 229, 0.6), rgba(33, 190, 253, 0.6)), url("../images/banner.jpeg  ") center center no-repeat;
+    background-size: cover;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 30px 0 70px 0;
+}
+.inner_banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 460px;
+    background-size: cover;
+}
+.banner_content {
+    max-width: 860px;
+    width: 100%;
+    margin-left: auto;
+    text-align: right;
+}
+.banner * {
+    color: #fff;
+}
+.banner h1 {
+    font-size: 97px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+}
+.banner h1 span {
+    font-size: 250px;
+    letter-spacing: 0;
+    display: inline-block;
+}
+.banner p {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.banner p + p {
+    margin-bottom: 0;
+}
+/*--- Banner CSS End ---*/
+
+
+/*--- Market Sec CSS Start ---*/
+.market_card {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 35px;
+}
+.market_icon {
+    width: 130px;
+    margin: 0 auto 25px;
+}
+.market_card h5 {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.market_card p {
+   font-size: 18px; 
+   font-weight: 300;
+   margin-bottom: 45px;
+}
+/*--- Market Sec CSS End ---*/
+
+
+/*--- About Sec CSS Start ---*/
+.about_section {
+    background-color: #333;
+    position: relative;
+}
+.about_inner {
+    max-width: 700px;
+}
+.about_section p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: #fff;
+    font-weight: 300;
+}
+.about_inner .btn {
+    margin-top: 35px;
+}
+.position_bg {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    opacity: 0.8;
+    width: 35%;
+}
+/*--- About Sec CSS Start ---*/
+
+/*--- Projects Sec CSS Start ---*/
+.project_card {
+    background-color: #333333;
+    text-align: center;
+    text-align: center;
+    height: 100%;
+}
+.project_card h5 {
+    font-weight: normal;
+    color: #fff;
+    min-height: 115px;
+}
+.project_card h5:after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary);
+    display: block;
+    margin: 15px auto 25px;
+}
+.project_card_body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.project_card p {
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-size: 17px;
+    min-height: 160px;
+}
+.project_card .btn1 {
+    margin-top: auto;
+}
+/*--- Projects Sec CSS End ---*/
+
+/*--- Global Sec CSS Start ---*/
+.global_section {
+    background-color: var(--color-primary);
+}
+.global_content {
+    padding-right: 15px;
+}
+.global_section .section_title span {
+    color: #fff;
+}
+.global_section .section_title h2:after {
+    background-color: #000;
+}
+.global_section h5 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+}
+.global_section p {
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+/*--- Global Sec CSS End ---*/
+
+
+/*--- About Tabs Sec CSS Start ---*/
+.nav-tabs {
+    border: none;
+    padding-bottom: 50px;
+    list-style: none !important;
+}
+.page_tabs .nav-tabs .nav-link {
+    padding: 0;
+    border: none;
+    text-shadow: 2px 2px 0px hsl(136deg 84% 51% / 0%);
+    color: rgba(0,0,0,0.6);
+    font-weight: 300;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+.page_tabs .nav-tabs .nav-link.active {
+    border-color: var(--color-primary)
+}
+
+.page_tabs p {
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+.page_tabs ul {
+    margin-bottom: 25px;
+    list-style: disc;
+    padding-left: 17px;
+}
+#technology ul {
+    padding-left: 0;
+    list-style: none;
+}
+.page_tabs li {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.page_tabs h5 {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin: 0 0 15px 0;
+}
+.page_tabs img {
+    width: auto;
+    margin-bottom: 20px;
+}
+.right_content {
+    padding-bottom: 50px;
+}
+
+.our_team_card img {
+    width: 100%;
+    max-width: 180px;
+    object-fit: cover;
+}
+
+
+.tabs_inner_content .market_card  {
+    max-width: 100%;
+    text-align: justify;
+}
+/*--- About Tabs Sec CSS End ---*/
+
+/*--- Text Sec CSS Start ---*/
+.text_section {
+    background-image: url("../images/img2markets-e1528816685546.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 630px;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+.text_section p {
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.65;
+}
+/*--- Text Sec CSS End ---*/
+
+
+/*--- Project Block CSS Start ---*/
+.project_block_text strong {
+    font-weight: 700;
+}
+/*--- Project Block CSS End ---*/
+
+
+/*--- Testimonials Sec CSS Start ---*/
+.testimonials_section {
+    background-color: var(--color-primary);
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.95);
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-inner {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+}
+.testimonials_slider p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+/*--- Testimonials Sec CSS End ---*/
+
+/*--- News Block CSS Start ---*/
+.read_more {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.read_more:after {
+    content: "»";
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 3px;
+}
+.news_block p {
+    color: #000;
+}
+.news_block_img {
+    text-align: center;
+    position: relative;
+}
+.news_block_img a:before {
+    background-color: #ff2a13;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    opacity: 0;
+    transition: 0.35s all ease;
+}
+.news_block_img a:hover:before {
+    opacity: 0.9;
+}
+.news_block_img a:after {
+    content: "\f0f6";
+    font: normal normal normal 24px/1 FontAwesome;
+    display: inline-block;
+    color: #fff;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.news_block_img a:hover:after {
+    opacity: 1;
+    border-color: var(--color-primary);
+}
+/*--- News Block CSS End ---*/
+
+
+/*--- Careers Sec CSS Start ---*/
+.careers_section p {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.file_attatch  {
+    background-color: var(--color-primary);
+    height: auto;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+.file_attatch input {
+    width: auto;
+    display: inline-block;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    padding-left: 0;
+    padding-right: 0;
+}
+.file_attatch label {
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+}
+.careers_section h5 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.form-control {
+    height: 45px;
+}
+textarea.form-control {
+    height: 170px;
+    resize: none;
+}
+.accordion>.card>.card-header {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #fff;
+}
+
+.accordion {
+    margin-top: 50px;
+}
+.accordion .card {
+    border: none;
+    border-bottom: 2px solid #ccc !important;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+.accordion .card p,
+.accordion .card li {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+}
+.accordion .card p + p {
+    margin-top: 15px;
+}
+.accordion .card ul {
+    list-style-type: disc;
+    padding-left: 15px;
+}
+.accordion .btn {
+    font-size: 22px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0;
+}
+.accordion .btn.collapsed {
+    color: var(--color-primary);
+}
+.accordion .btn:after {
+    content: "\f107";
+    font:  20px/1 FontAwesome;
+    font-weight: 700;
+    transition: 0.25s all ease;
+    transform: rotate(180deg);
+}
+.accordion .btn.collapsed:after {
+    transform: rotate(0);
+}
+.positions_col .card {
+    box-shadow: 0em 0.15em 0.65em 0em rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    border: none !important;
+}
+.positions_col h3 {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.positions_col .accordion {
+    margin-top: 0;
+}
+.positions_col .accordion>.card .btn {
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+.positions_col .accordion>.card .btn.collapsed {
+    border-color: transparent;
+}
+/*--- Careers Sec CSS End ---*/
+
+
+/*--- Contact block CSS Start ---*/
+  
+.location_block img {
+    margin-bottom: 15px;
+}
+.contact_block h5 {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.contact_block p {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+
+.map_block {
+    min-height: 370px;
+    background-color: #ccc;
+}
+/*--- Contact block CSS StartEnd ---*/
+
+
+
+/*--- Footer CSS Start ---*/
+.footer_wrap {
+    background-color: #333;
+    padding: 50px 0;
+}
+.ftr_row {
+    padding-left: 15%;
+}
+.ftr_logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.frt_address  {
+    padding-top: 20px;
+    max-width: 250px;
+}
+.frt_address h5 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.frt_address p {
+    font-size: 14px;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.ftr_bottom {
+    margin-top: 15px;
+    padding: 15px 0 0 0;
+    border-top: 2px solid #fff;
+}
+.ftr_links ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ftr_links a {
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    margin:7px 10px;
+    display: inline-block;
+}
+.copyrights p {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 12px;
+}
+/*--- Footer CSS End ---*/
+
+
+
+/*--- Responsiveness Start ---*/
+
+@media (max-width: 1199px) {
+    .banner h1 span {
+        font-size: 200px;
+    }
+    .banner h1 {
+        font-size: 87px;
+    }
+    .banner p {
+        font-size: 26px;
+    }
+    .navbar-nav {
+        padding-top: 25px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link, 
+    .navbar-expand-lg .navbar-nav a {
+        padding: 10px 15px;
+    }
+    .navbar-expand-lg .navbar-nav li + li {
+        margin-left: 0;
+        border-top: 1px solid #fff;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner h1 span {
+        font-size: 150px;
+    }
+    .banner h1 {
+        font-size: 75px;
+    }
+    .h2, h2 {
+        font-size: 36px;
+    }
+    .h3, h3 {
+        font-size: 26px;
+    }
+    .ftr_row {
+        padding-left: 0;
+    }
+    .tabs_btn {
+        display: flex;
+    }
+    .nav-tabs {
+        display: none;
+        flex-wrap: wrap;
+        padding: 10px 0 0 0 !important;
+        max-width: 300px;
+        box-shadow: 0 3px 10px 0 rgb(0 0 0 / 0.15);
+        margin-top: 10px;
+    }
+    .nav-tabs li {
+        width: 100%;
+        margin: 0 0 7px 0;
+    }
+    .page_tabs .nav-tabs .nav-link {
+        margin: 0 5px;
+        padding: 5px;
+    }
+
+    .text_section {
+        min-height: 450px;
+    }
+    .text_section p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .careers_col {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-brand {
+        width: 140px;
+    }
+    .banner h1 span {
+        font-size: 90px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    .banner p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .banner {
+        padding-bottom: 40px;
+    }
+    .inner_banner {
+        height: 265px;
+    }
+    .testimonials_slider p {
+        font-size: 18px;
+    }
+    .testimonials_section {
+        min-height: 300px;
+    }
+    .carousel-control-next {
+        right: -5px;
+    }
+    .carousel-control-prev {
+        left: -5px;
+    }
+    .accordion .btn {
+        font-size: 16px;
+    }
+
+    .map_block {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .banner h1 {
+        font-size: 36px;
+    }
+    .banner h1 span {
+        font-size: 86px;
+    }
+    .banner p {
+        font-size: 18px;
+    }
+}
+/*--- Responsiveness End ---*/
