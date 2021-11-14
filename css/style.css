@@ -330,7 +330,11 @@ header {
 }
 .market_icon {
     width: 130px;
+    height: 135px;
     margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .market_card h5 {
     text-transform: uppercase;
@@ -887,6 +891,9 @@ textarea.form-control {
     }
 
     .careers_col {
+        margin-bottom: 35px;
+    }
+    .section_title {
         margin-bottom: 35px;
     }
 }
