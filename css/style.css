@@ -556,7 +556,7 @@ header {
     position: relative;
 }
 .news_block_img a:before {
-    background-color: #ff2a13;
+    background-color: var(--color-primary);
     content: '';
     position: absolute;
     left: 0;
