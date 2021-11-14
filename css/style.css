@@ -477,7 +477,7 @@ header {
 
 /*--- Text Sec CSS Start ---*/
 .text_section {
-    background-image: url("../images/img2markets-e1528816685546.png");
+    background-image: linear-gradient(rgba(29, 136, 229, 0.6), rgba(33, 190, 253, 0.6)), url("../images/factory.jpeg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
